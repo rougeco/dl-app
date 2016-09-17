@@ -1,0 +1,13 @@
+{
+    "name": "hoel/diplome",
+    "description": "Projet diplome IMIE WMD 2016",
+    "authors": [
+        {
+            "name": "Hoel Corouge",
+            "email": "corouge.hoel@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "*"
+    }
+}
