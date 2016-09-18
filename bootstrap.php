@@ -1,27 +1,21 @@
-<?php // bootstrap.php
-/**
- * Gives us the EntityManager from Doctrine
- */
+<?php
+// bootstrap.php
+require_once "vendor/autoload.php";
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-require_once 'vendor/autoload.php';
-$isDevMode = true;
+$paths = array(__DIR__."/src/Entity");
+$isDevMode = false;
 
-$config = Setup::createAnnotationMetadataConfiguration(array(
-    __DIR__."/app/Entity"),
-    $isDevMode
-);
-// database configuration parameters
-$dbConfig = array(
-//    'driver' => 'pdo_sqlite',
-//    'path' => __DIR__ . '/db.sqlite',
+// the connection configuration
+$dbParams = array(
     'driver'   => 'pdo_mysql',
-    'host'     => '127.0.0.1',
     'user'     => 'root',
+    'host'     => 'localhost',
     'password' => '',
     'dbname'   => 'dlapp',
 );
 
-// obtaining the entity manager
-$em = EntityManager::create($dbConfig, $config);
+$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
+$entityManager = EntityManager::create($dbParams, $config);

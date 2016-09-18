@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Hoel
- * Date: 17/09/2016
- * Time: 16:40
- */
+require_once "vendor/autoload.php";
+require_once 'bootstrap.php';
+
+
+echo Doctrine_Core::getPath();
