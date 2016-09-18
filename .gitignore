@@ -6,6 +6,7 @@ config.ini.php
 .idea
 z-doc
 vendor
+z-sources
 
 
 # Composer files
