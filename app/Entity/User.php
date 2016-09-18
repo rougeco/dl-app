@@ -12,4 +12,16 @@ namespace Entity;
 class User
 {
 
+    private $id;
+    private $name;
+    private $email;
+    private $nickname;
+    private $created_date;
+
+    public function __construct()
+    {
+
+    }
+
+
 }
