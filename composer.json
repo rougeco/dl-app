@@ -8,8 +8,8 @@
         }
     ],
     "require": {
-      "doctrine/orm": "2.4.*",
-      "symfony/yaml": "2.*"
+      "doctrine/orm": "*",
+      "symfony/yaml": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "5.5.*"

@@ -7,16 +7,29 @@
  */
 
 namespace Entity;
-
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\OneToOne;
+use Doctrine\ORM\Mapping\Table;
 
 // src/Product.php
-/**
- * @Entity @Table(name="products")
- **/
+
 class Product
 {
-    /** @Id @Column(type="integer") @GeneratedValue **/
-    protected $id;
-    /** @Column(type="string") **/
-    protected $name;
+
+    protected $id_product;
+    protected $nom;
+    protected $dsc;
+    protected $compo;
+    protected $sheet;
+    protected $reference;
+    protected $image;
+    protected $category;
+
+    public function __construct()
+    {
+    }
+
 }

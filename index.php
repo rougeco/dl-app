@@ -1,6 +1,15 @@
 <?php
 require_once "vendor/autoload.php";
-require_once 'bootstrap.php';
+
+echo 'salut les gens';
 
 
-echo Doctrine_Core::getPath();
+// src/Product.php
+/**
+ * @Entity @Table(name="products")
+ **/
+class Product
+{
+    /** @Id @Column(type="integer") @GeneratedValue **/
+    protected $id_product;
+    /** @Column(type="string") **/
